@@ -12,6 +12,7 @@ const Login = () => {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errMsg, setErrMsg] = useState(""); // Add this line
 
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem("user"));
@@ -19,7 +20,7 @@ const Login = () => {
       setUser(loggedInUser);
       navigateToCorrectRoute(loggedInUser);
     }
-  }, [navigate, navigateToCorrectRoute]);
+  }, [navigate]);
 
   const navigateToCorrectRoute = (loggedInUser) => {
     if (loggedInUser.role === "admin") {

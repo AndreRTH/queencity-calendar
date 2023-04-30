@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from '../../../../api/axios';
 import './Login.css';
 import ClientNavbar from '../../../bars/client-navbar/ClientNavbar';
@@ -12,15 +12,23 @@ const Login = () => {
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errMsg, setErrMsg] = useState(""); // Add this line
+  const [setErrMsg] = useState(""); // Add this line
 
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem("user"));
+    const navigateToCorrectRoute = (loggedInUser) => {
+      if (loggedInUser.role === "admin") {
+        navigate("/adminhome");
+      } else if (loggedInUser.role === "user") {
+        navigate("/");
+      }
+    };
     if (loggedInUser) {
       setUser(loggedInUser);
       navigateToCorrectRoute(loggedInUser);
     }
   }, [navigate]);
+  
 
   const navigateToCorrectRoute = (loggedInUser) => {
     if (loggedInUser.role === "admin") {

@@ -9,11 +9,9 @@ const LOGIN_URL = 'http://localhost:3001/login';
 
 const Login = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errMsg, setErrMsg] = useState("");
 
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem("user"));
@@ -21,7 +19,7 @@ const Login = () => {
       setUser(loggedInUser);
       navigateToCorrectRoute(loggedInUser);
     }
-  }, [navigate]);
+  }, [navigate, navigateToCorrectRoute]);
 
   const navigateToCorrectRoute = (loggedInUser) => {
     if (loggedInUser.role === "admin") {

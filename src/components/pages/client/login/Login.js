@@ -86,6 +86,8 @@ const Login = () => {
     return (
       <>
       <ClientNavbar />
+      <br></br>
+      <br></br>
       <div className="login-container">
         {userName} is logged in{userRole === "admin" && " as admin"}
         <button onClick={handleLogout}>logout</button>

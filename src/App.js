@@ -46,6 +46,7 @@ function App() {
         <Route path="/DiscCornhole" element={<DiscCornhole />} />
         <Route path="/DiscHappy" element={<DiscHappy />} />
         <Route path='/login' element={<Login />}/>
+        <Route path="/adminaccount" element={<AccountCreation />} />
 
         {role === 'user' && (
           <>
@@ -58,7 +59,6 @@ function App() {
           <>
             <Route path="/adminforum" element={<Adminforum />} />
             <Route path="/adminhome" element={<Adminhome />} />
-            <Route path="/adminaccount" element={<AccountCreation />} />
             <Route path="/admincalendar" element={<AdminCalendar />} />
           </>
         )}

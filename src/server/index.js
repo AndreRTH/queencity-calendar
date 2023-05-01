@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-	origin: ['http://localhost:3000', 'https://fantastic-unicorn-4afcde.netlify.app'],
+	origin: ['http://localhost:3000', 'https://fantastic-unicorn-4afcde.netlify.app', 'https://main--fantastic-unicorn-4afcde.netlify.app'],
   	credentials: true,
 }));
 

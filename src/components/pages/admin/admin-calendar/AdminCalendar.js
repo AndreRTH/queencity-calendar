@@ -16,6 +16,11 @@ const AdminCalendar = () => {
       })
       .catch(error => console.error(error));
   }, []);
+  const headerToolbar = {
+    start: "",
+    center: "title",
+    end: "today prev,next dayGridMonth"
+    };
 
  
 //   console.log(events);
@@ -33,6 +38,7 @@ const AdminCalendar = () => {
         end: event.end,
         url: event.url
       }))}
+      headerToolbar={headerToolbar}
     //   eventClick={handleEventClick}
     />
 	<Footer />

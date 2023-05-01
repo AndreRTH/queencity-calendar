@@ -58,7 +58,7 @@ function App() {
           <>
             <Route path="/adminforum" element={<Adminforum />} />
             <Route path="/adminhome" element={<Adminhome />} />
-            <Route path="/adminaccount-creation" element={<AccountCreation />} />
+            <Route path="/adminaccount" element={<AccountCreation />} />
             <Route path="/admincalendar" element={<AdminCalendar />} />
           </>
         )}

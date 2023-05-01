@@ -84,11 +84,17 @@ const Login = () => {
     const userName = user[0].email;
     const userRole = user[0].role;
     return (
+      <>
+      <ClientNavbar />
+      <br></br>
+      <br></br>
       <div className="login-container">
         {userName} is logged in{userRole === "admin" && " as admin"}
         <button onClick={handleLogout}>logout</button>
         <Link to={userRole === "admin" ? "/adminhome" : "/"}>Go to {userRole === "admin" ? "Admin Page" : "Home Page"}</Link>
       </div>
+      <Footer/>
+      </>
     );
   }
   

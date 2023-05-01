@@ -46,7 +46,7 @@ function App() {
         <Route path="/DiscCornhole" element={<DiscCornhole />} />
         <Route path="/DiscHappy" element={<DiscHappy />} />
         <Route path='/login' element={<Login />}/>
-        <Route path="/adminaccount" element={<AccountCreation />} />
+        <Route path="/admin-account" element={<AccountCreation />} />
 
         {role === 'user' && (
           <>

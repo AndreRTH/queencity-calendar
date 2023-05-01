@@ -6,6 +6,7 @@ import Forum from './components/pages/client/forum/Forum';
 import Contact from './components/pages/client/contact/Contact';
 import Adminforum from './components/pages/admin/admin-forum/Adminforum';
 import Adminhome from './components/pages/admin/admin-home/Adminhome';
+import AdminAbout from './components/pages/admin/admin-about/AdminAbout';
 import AccountCreation from './components/pages/admin/admin-account/AccountCreation';
 import DiscSymph from './components/pages/client/forum/discussion/DiscSymph/DiscSymph';
 import DiscMarket from './components/pages/client/forum/discussion/disc-market/DiscMarket';
@@ -60,6 +61,7 @@ function App() {
             <Route path="/adminforum" element={<Adminforum />} />
             <Route path="/adminhome" element={<Adminhome />} />
             <Route path="/admincalendar" element={<AdminCalendar />} />
+            <Route path="/adminabout" element={<AdminAbout />} />
           </>
         )}
 
